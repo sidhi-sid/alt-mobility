@@ -1,0 +1,10 @@
+<mat-card class="chart-card">
+  <canvas baseChart      
+  [datasets]="labelMFL"
+  [labels]="lineChartLabels"
+  [options]="lineChartOptions"
+  [type]="'bar'"
+  (chartHover)="chartHovered($event)"
+  (chartClick)="chartClicked($event)"></canvas>
+</mat-card>
+

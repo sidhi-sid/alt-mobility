@@ -1,1 +1,39 @@
-<p>dashboard works!</p>
+<mat-sidenav-container [hasBackdrop]="true" (backdropClick)="close('backdrop')" (keydown.escape)="close('escape')">
+  <mat-sidenav #sidenav class="sidenav">
+    <div>
+      abcd
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content style="height: 100vh;">
+    <div>
+      <mat-toolbar color="primary">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      <img src="../../assets/images/logo.JPG" width="45" height="45">
+      <span class="m-2">Alt Mobility</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="img-account">
+          account_circle
+      </mat-icon>
+      </button>
+      </mat-toolbar>
+    </div>
+    <div class="">
+      <div class="row m-2 mt-4">
+        <div class="col-6">
+          <app-critical-chart></app-critical-chart>
+        </div>
+        <div class="col-6">
+         <app-resolution-chart></app-resolution-chart>
+        </div>
+      </div>
+      <div class="row mt-4 m-2">
+        <app-alerts-table></app-alerts-table>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
